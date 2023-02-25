@@ -16,7 +16,7 @@ from functions.format import formatPrice
 
 __author__ = 'Vadim Arsenev'
 __version__ = '1.0.0'
-__data__ = '23.02.2023'
+__data__ = '25.02.2023'
 
 
 ORDER = list(map(lambda x: x.split(':')[0].strip(), \
@@ -34,6 +34,7 @@ def nftCollectionItems(cards):
         tokenId = item['index']
         playerName = item['name']
         cardNftAddress = item['address']
+        cardNftFullAddress = f'{settings.COLLECTION_URL}/{cardNftAddress}'
 
         try:
             price = item['sale']['fullPrice']
@@ -55,6 +56,7 @@ def nftCollectionItems(cards):
           
         ownerName = item['owner']['name']
         ownerWallet = item['owner']['wallet']
+        ownerWalletFull = f'{settings.WALLET_URL}/{ownerWallet}'
 
         price = formatPrice(price)
 
@@ -63,11 +65,13 @@ def nftCollectionItems(cards):
             'tokenId': tokenId,
             'playerName': playerName,
             'cardNftAddress': cardNftAddress,
+            'cardNftFullAddress': cardNftFullAddress,
             'price': price,
             'cardRarity': cardRarity,
             'cardTier': cardTier,
             'ownerName': ownerName,
             'ownerWallet': ownerWallet,
+            'ownerWalletFull': ownerWalletFull,
         }
 
         write_csv(settings.RESULT_FILE[0], \

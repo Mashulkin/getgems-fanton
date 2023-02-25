@@ -1,8 +1,10 @@
-tokenId:            tokenId
 playerName:         Name
-cardNftAddress:     Address
-price:              Price
 cardRarity:         Rarity
 cardTier:           Tier
+price:              Price
+cardNftAddress:     Address
+cardNftFullAddress: Link
 ownerName:          Owner
 ownerWallet:        OwnerWallet
+ownerWalletFull:    OwnerWalletLink
+tokenId:            tokenId
