@@ -1,4 +1,4 @@
-# Fantasy premier league
+# Fanton. Getgems
 
 To run this application
 
