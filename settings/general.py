@@ -42,3 +42,21 @@ query {
   }
 }
 """
+
+BODY_NFT_USERS = \
+"""
+query {
+  ownerStatsNftCollection (collectionAddress: "EQBpBsShOF1EvuX3nOKwNuzr5YWlJjdpCH_2n8ybizF479Tg", first: 100000) {
+    items {
+      ownerUser {
+        name
+        wallet
+        socialLinks {
+          url
+        }
+        description
+      }
+    }
+  }
+}
+"""
