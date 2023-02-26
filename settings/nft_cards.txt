@@ -2,8 +2,8 @@ playerName:         Name
 cardRarity:         Rarity
 cardTier:           Tier
 price:              Price
-cardNftAddress:     Address
 cardNftFullAddress: Link
+cardNftAddress:     Address
 ownerName:          Owner
 ownerWallet:        OwnerWallet
 ownerWalletFull:    OwnerWalletLink
