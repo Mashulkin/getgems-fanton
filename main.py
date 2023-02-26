@@ -15,8 +15,8 @@ from functions.format import formatPrice
 
 
 __author__ = 'Vadim Arsenev'
-__version__ = '1.0.0'
-__data__ = '25.02.2023'
+__version__ = '1.0.1'
+__data__ = '26.02.2023'
 
 
 ORDER = list(map(lambda x: x.split(':')[0].strip(), \
@@ -29,6 +29,7 @@ def nftCollectionItems(cards):
        and writing to a file
     """
     print_headline(settings.RESULT_FILE[0], settings.COLUMNS, ORDER)
+    row_data = 1
     for item in cards['data']['nftCollectionItems']['items']:
         # ***** Main query *****
         tokenId = item['index']
@@ -74,8 +75,9 @@ def nftCollectionItems(cards):
             'ownerWalletFull': ownerWalletFull,
         }
 
-        write_csv(settings.RESULT_FILE[0], \
-            data_nft_cards, ORDER)
+        row_data +=1
+        part = row_data // settings.MAX_ROW
+        write_csv(settings.RESULT_FILE[part], data_nft_cards, ORDER)
 
 
 def main():
@@ -87,5 +89,6 @@ def main():
 
 
 if __name__ == '__main__':
-    remove_file(settings.RESULT_FILE[0])
+    for item in settings.RESULT_FILE:
+        remove_file(item)
     main()
