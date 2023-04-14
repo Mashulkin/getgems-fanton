@@ -1,7 +1,7 @@
 
 __author__ = 'Vadim Arsenev'
 __version__ = '1.0.2'
-__data__ = '26.02.2023'
+__data__ = '14.04.2023'
 
 
 API_URL = 'https://api.getgems.io/graphql'
@@ -16,7 +16,7 @@ MAX_ROW = 5000
 BODY_NFT_CARDS = \
 """
 query {
-  nftCollectionItems (address: "EQBpBsShOF1EvuX3nOKwNuzr5YWlJjdpCH_2n8ybizF479Tg", first: 15000) {
+  nftCollectionItems (address: "EQBpBsShOF1EvuX3nOKwNuzr5YWlJjdpCH_2n8ybizF479Tg", first: 20000) {
     items {
       name
       address
