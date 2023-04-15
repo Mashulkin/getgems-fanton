@@ -10,7 +10,7 @@ WALLET_URL = 'https://getgems.io/user'
 
 # for NFT cards only
 COLUMNS = './settings/nft_cards.txt'
-RESULT_FILE = ['./data/nft_cards1.csv', './data/nft_cards2.csv', './data/nft_cards3.csv']
+RESULT_FILE = ['./data/nft_cards1.csv', './data/nft_cards2.csv', './data/nft_cards3.csv', './data/nft_cards4.csv']
 MAX_ROW = 5000
 
 BODY_NFT_CARDS = \
